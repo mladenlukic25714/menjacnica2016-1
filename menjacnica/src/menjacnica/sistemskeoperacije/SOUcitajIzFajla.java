@@ -1,13 +1,14 @@
 package menjacnica.sistemskeoperacije;
 
 import java.io.BufferedInputStream;
+import java.io.Serializable;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.LinkedList;
 
 import menjacnica.Valuta;
 
-public class SOUcitajIzFajla {
+public class SOUcitajIzFajla implements Serializable{
 	public static void izvrsi(String putanja, LinkedList<Valuta> kursnaLista) {
 		try{
 			ObjectInputStream in = new ObjectInputStream(
